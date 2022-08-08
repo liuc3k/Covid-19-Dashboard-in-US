@@ -909,9 +909,10 @@ server <- function(input, output) {
   ###Import COVID DATA from NY time.
   us_his<-fread('https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv')
   us_total<-fread("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us.csv")
-  census_api_key("4b9473175cd5c1c8673b2e7c40375e0f47d64589",
-                 install = TRUE,
-                 overwrite=TRUE)
+  #census_api_key("4b9473175cd5c1c8673b2e7c40375e0f47d64589",
+                 #install = TRUE,
+                 #overwrite=TRUE)
+  census_api_key("4b9473175cd5c1c8673b2e7c40375e0f47d64589")
   population <- get_acs(geography = "state",
                         variables = "B01003_001"
   )%>%
